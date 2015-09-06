@@ -20,9 +20,9 @@
                         </p>
 
                         <p> 
-                        		Closing price <input type="checkbox" name='features1' value='Close'><br>
-					Adjusted closing price <input type="checkbox" name='features2' value='Adj. Close'><br>
-					Volume <input type="checkbox" name='features3' value='Volume'><br>
+                        		Closing price <input type="checkbox" name='features' value='Close'><br>
+					Adjusted closing price <input type="checkbox" name='features' value='Adj. Close'><br>
+					Volume <input type="checkbox" name='features' value='Volume'><br>
                         </p>
 
                           <p>
