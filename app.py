@@ -58,7 +58,7 @@ def next_lulu():
     s[0] = pd.to_datetime(s[0])
 
     # build our figures
-    p1 = figure(tools=TOOLS,x_axis_type = "datetime",title = "Stock Returns")
+    p1 = figure(tools=TOOLS,x_axis_type = "datetime",title = "Data from Quandle WIKI set")
     p1.xaxis.axis_label = 'Date'
     
 
@@ -66,10 +66,10 @@ def next_lulu():
 
 
     if request.form.get('features1'):
-	p1.line(s[0], s[4], color="red", legend="Close")
+	p1.line(s[0], s[4], color="red", legend="Closing price")
     
     if request.form.get('features2'):
-        p1.line(s[0], s[11] , color="blue",legend="Adj. Close")
+        p1.line(s[0], s[11] , color="blue",legend="Adjusted closing price")
     
     if request.form.get('features3'):
         p1.line(s[0], s[5] , color="yellow",legend="Volume")

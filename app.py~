@@ -51,7 +51,7 @@ def next_lulu():
     
 
     ddate = r.json()
-    if ddate['quandl_error']:
+    if ddate.has_key('quandl_error'):
 	return render_template('end_lulu.html')
     
     s = pd.DataFrame(ddate['dataset']['data'])
