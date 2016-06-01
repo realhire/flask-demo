@@ -4,33 +4,68 @@
 		<meta charset="utf-8">
 		<title>User Input</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<script type="text/javascript">
+
+			function validate_required(field,alerttxt)
+			{
+				with (field)
+  					{
+  						if (value==null||value=="")
+    							{alert(alerttxt);return false}
+  						else {return true}
+  					}
+			}
+
+			function validate_form(thisform)
+			{
+				with (thisform)
+  					{
+  						if (validate_required(name_lulu,"Ticker symbol must be filled out!")==false)
+    							{name_lulu.focus();return false}
+
+						if ( (features1.checked == false) && (features2.checked == false) && (features3.checked == false))
+							{alert("You must choose one or more!");return false}
+  					}
+			}
+		</script>
+
 	</head>
 	<body>
+
+		<script type="text/javascript">
+
+			document.write(Date())
+
+		</script>
+
+
+		
 		<div>
   			<h1>User Input</h1>
           		<div class=metanav>
-                        <h4>
-                        Please enter a stock ticker eg. GOOG, and check desired features.
-                        </h4>
+                        	<h4>
+                        		Please enter a stock ticker eg. GOOG, and check desired features.
+                        	</h4>
 
-                        <h4>
-                        <form id='answerform_lulu' method='post' action='next_lulu' > <!-- action must match your next URL -->
+                        	<h4>
+                        		<form id='answerform_lulu' method='post' action='next_lulu' onsubmit="return validate_form(this)"> <!-- action must match your next URL -->
                           
-                        <p>
-                           Ticker symbol: <input type='text' name='name_lulu' />
-                        </p>
+                        		<p>
+                           			Ticker symbol: <input type='text' name='name_lulu' />
+                        		</p>
 
-                        <p> 
-                        		Closing price <input type="checkbox" name='features1' value='Close'><br>
-					Adjusted closing price <input type="checkbox" name='features2' value='Adj. Close'><br>
-					Volume <input type="checkbox" name='features3' value='Volume'><br>
-                        </p>
+                        		<p> 
+                        			Closing price <input type="checkbox" name='features1' value='Close'><br>
+						Adjusted closing price <input type="checkbox" name='features2' value='Adj. Close'><br>
+						Volume <input type="checkbox" name='features3' value='Volume'><br>
+                        		</p>
 
-                          <p>
-                         <input type='submit' value='Submit' /> <!--the 'value' is the word that will appear on your button.-->
-                          </p>
-                          </form>
-                          </h4>
+                        		<p>
+                         			<input type='submit' value='Submit' /> <!--the 'value' is the word that will appear on your button.-->
+                         		</p>
+                          		</form>
+                          	</h4>
 		</div>
 	</body>
 </html>

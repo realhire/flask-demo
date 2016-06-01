@@ -1,0 +1,12 @@
+Flask-stock-demo
+
+requirements:
+Flask (Python Web Framework)
+numpy (a Python libraray for large, multi-dimensional arrays and matrices)
+pandas (a data analysis library)
+bokeh (a Python interactive visualization library)
+
+API: https://www.quandl.com/
+
+
+
